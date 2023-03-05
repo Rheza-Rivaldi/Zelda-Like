@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public enum enemyState{
+        idle,
+        walk,
+        attack,
+        stagger
+    }
+    public enemyState currentState;
+
+
     public int health;
     public string enemyName;
     public int baseAttack;

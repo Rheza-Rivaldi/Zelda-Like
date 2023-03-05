@@ -7,6 +7,7 @@ TagManager:
   - Warper
   - PlaceCard
   - Breakable
+  - Enemy
   layers:
   - Default
   - TransparentFX
