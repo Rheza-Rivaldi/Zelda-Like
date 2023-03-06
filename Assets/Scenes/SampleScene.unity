@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 94022405}
   m_Layer: 0
   m_Name: DownHitBox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -194,9 +194,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 94022402}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e2c4f546083e544185c7d1d7e0aae62, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f815ff18af440f4fbecfe0233cd7563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knockbackForce: 2
+  knockbackDuration: 0.2
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,7 +351,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.002407074, y: -0.01684916}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -360,7 +362,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8422406, y: 0.90839815}
+  m_Size: {x: 0.8855672, y: 0.990237}
   m_EdgeRadius: 0
 --- !u!212 &682446542
 SpriteRenderer:
@@ -5599,6 +5601,7 @@ GameObject:
   - component: {fileID: 998483221}
   - component: {fileID: 998483224}
   - component: {fileID: 998483223}
+  - component: {fileID: 998483225}
   m_Layer: 0
   m_Name: Log
   m_TagString: Enemy
@@ -5757,7 +5760,8 @@ MonoBehaviour:
   target: {fileID: 0}
   originalPosition: {x: 0, y: 0, z: 0}
   chaseRadius: 4
-  attackRadius: 1
+  attackRadius: 1.2
+  anim: {fileID: 0}
 --- !u!61 &998483224
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5784,6 +5788,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0706558, y: 1.3964052}
   m_EdgeRadius: 0
+--- !u!114 &998483225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998483217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f815ff18af440f4fbecfe0233cd7563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockbackForce: 2
+  knockbackDuration: 0.2
 --- !u!1 &1048394312
 GameObject:
   m_ObjectHideFlags: 0
@@ -5797,7 +5815,7 @@ GameObject:
   - component: {fileID: 1048394315}
   m_Layer: 0
   m_Name: RightHitBox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5855,9 +5873,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1048394312}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e2c4f546083e544185c7d1d7e0aae62, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f815ff18af440f4fbecfe0233cd7563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knockbackForce: 2
+  knockbackDuration: 0.2
 --- !u!1 &1064996610
 GameObject:
   m_ObjectHideFlags: 0
@@ -5871,7 +5891,7 @@ GameObject:
   - component: {fileID: 1064996613}
   m_Layer: 0
   m_Name: UpHitBox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5929,9 +5949,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1064996610}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e2c4f546083e544185c7d1d7e0aae62, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f815ff18af440f4fbecfe0233cd7563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knockbackForce: 2
+  knockbackDuration: 0.2
 --- !u!1 &1158225095
 GameObject:
   m_ObjectHideFlags: 0
@@ -6112,7 +6134,7 @@ GameObject:
   - component: {fileID: 1498382288}
   m_Layer: 0
   m_Name: LeftHitBox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6170,9 +6192,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1498382285}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e2c4f546083e544185c7d1d7e0aae62, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f815ff18af440f4fbecfe0233cd7563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knockbackForce: 2
+  knockbackDuration: 0.2
 --- !u!1 &1705634573
 GameObject:
   m_ObjectHideFlags: 0
@@ -24629,20 +24653,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1970304934
-MonoBehaviour:
+--- !u!61 &1970304934
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970304927}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f815ff18af440f4fbecfe0233cd7563, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  knockbackForce: 2
-  knockbackDuration: 0.2
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0026282668, y: -0.091988444}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 2}
+    newSize: {x: 1, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5006343, y: 1.0170376}
+  m_EdgeRadius: 0
 --- !u!1001 &2340851051524833941
 PrefabInstance:
   m_ObjectHideFlags: 0

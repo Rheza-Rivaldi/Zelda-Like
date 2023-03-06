@@ -9,12 +9,13 @@ public class PlayerMovement : MonoBehaviour
         idle,
         walk,
         attack,
-        interact
+        interact,
+        stagger
     }
     public PlayerState currentState;
 
     public float speed;
-    private Rigidbody2D myrigidbody;
+    private Rigidbody2D myRigidbody;
     private Vector3 change;
     private Animator animator;
 
@@ -23,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     {
         currentState = PlayerState.idle;
         animator = GetComponent<Animator>();
-        myrigidbody = GetComponent<Rigidbody2D>();
+        myRigidbody = GetComponent<Rigidbody2D>();
         animator.SetFloat("moveX", 0);
         animator.SetFloat("moveY", 1);
     }
@@ -34,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
         change = Vector3.zero;
         change.x = Input.GetAxisRaw("Horizontal");
         change.y = Input.GetAxisRaw("Vertical");
-        if(Input.GetButtonDown("Attack") && currentState != PlayerState.attack){
+        if(Input.GetButtonDown("Attack") && currentState != PlayerState.attack && currentState != PlayerState.stagger){
             StartCoroutine(AttackAnim());
         }
         else if(currentState == PlayerState.idle){
@@ -68,6 +69,18 @@ public class PlayerMovement : MonoBehaviour
 
     void MoveCharacter(){
         change.Normalize();
-        myrigidbody.MovePosition (transform.position + change * speed * Time.fixedDeltaTime);
+        myRigidbody.MovePosition (transform.position + change * speed * Time.fixedDeltaTime);
+    }
+
+    public void KnockPlayer(float knockbackDuration){
+        StartCoroutine(DoKnockback(knockbackDuration));
+    }
+
+    private IEnumerator DoKnockback(float knockbackDuration){
+        if(myRigidbody != null){
+            yield return new WaitForSeconds(knockbackDuration);
+            myRigidbody.velocity = Vector2.zero;
+            currentState = PlayerState.idle;
+        }
     }
 }
