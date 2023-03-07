@@ -6,6 +6,7 @@ public class Knockback : MonoBehaviour
 {
     public float knockbackForce;
     public float knockbackDuration;
+    public float damage;
 
     private void Update() {
         if(this.gameObject.activeInHierarchy && this.gameObject.CompareTag("Player"))
@@ -25,13 +26,15 @@ public class Knockback : MonoBehaviour
                 difference = difference.normalized * knockbackForce;
                 targetRB.AddForce(difference, ForceMode2D.Impulse);
 
-                if(other.gameObject.CompareTag("Enemy")){
+                if(other.gameObject.CompareTag("Enemy") && other.isTrigger){
                     other.GetComponent<Enemy>().currentState = Enemy.enemyState.stagger;
-                    other.GetComponent<Enemy>().KnockEnemy(targetRB, knockbackDuration);
+                    other.GetComponent<Enemy>().KnockEnemy(targetRB, knockbackDuration, damage);
                 }
                 if(other.gameObject.CompareTag("Player")){
-                    other.GetComponent<PlayerMovement>().currentState = PlayerMovement.PlayerState.stagger;
-                    other.GetComponent<PlayerMovement>().KnockPlayer(knockbackDuration);
+                    if(other.GetComponent<PlayerMovement>().currentState != PlayerMovement.PlayerState.stagger){
+                        other.GetComponent<PlayerMovement>().currentState = PlayerMovement.PlayerState.stagger;
+                        other.GetComponent<PlayerMovement>().KnockPlayer(knockbackDuration, damage);
+                    }
                 }
                 
             }
