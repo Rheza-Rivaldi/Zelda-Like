@@ -15823,7 +15823,7 @@ GameObject:
   - component: {fileID: 998483224}
   - component: {fileID: 998483223}
   - component: {fileID: 998483225}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Log
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -80552,9 +80552,21 @@ PrefabInstance:
       value: Field Ahead
       objectReference: {fileID: 0}
     - target: {fileID: 389613125124226518, guid: fc5904fba78c08d42a4baeb36c313840, type: 3}
+      propertyPath: context
+      value: 
+      objectReference: {fileID: 11400000, guid: 7b28ecd7d1314f14b8687db1c1cc252f, type: 2}
+    - target: {fileID: 389613125124226518, guid: fc5904fba78c08d42a4baeb36c313840, type: 3}
+      propertyPath: contextOn
+      value: 
+      objectReference: {fileID: 11400000, guid: 7b28ecd7d1314f14b8687db1c1cc252f, type: 2}
+    - target: {fileID: 389613125124226518, guid: fc5904fba78c08d42a4baeb36c313840, type: 3}
       propertyPath: dialogBox
       value: 
       objectReference: {fileID: 745738559}
+    - target: {fileID: 389613125124226518, guid: fc5904fba78c08d42a4baeb36c313840, type: 3}
+      propertyPath: contextOff
+      value: 
+      objectReference: {fileID: 11400000, guid: 0bd0888a886f7da4eae036978bd15b12, type: 2}
     - target: {fileID: 389613125124226518, guid: fc5904fba78c08d42a4baeb36c313840, type: 3}
       propertyPath: dialogText
       value: 
