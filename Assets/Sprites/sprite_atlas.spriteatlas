@@ -1648,7 +1648,6 @@ SpriteAtlas:
   - {fileID: -6835189599539173722, guid: 1a61fd763a59cf14991dade04c3c48a2, type: 3}
   - {fileID: 8539232767462348580, guid: 1a61fd763a59cf14991dade04c3c48a2, type: 3}
   - {fileID: 679739729869728943, guid: 1a61fd763a59cf14991dade04c3c48a2, type: 3}
-  - {fileID: 5248155131499935147, guid: 1a61fd763a59cf14991dade04c3c48a2, type: 3}
   - {fileID: -3303779423006393323, guid: 1a61fd763a59cf14991dade04c3c48a2, type: 3}
   - {fileID: -5008138227279614530, guid: 1a61fd763a59cf14991dade04c3c48a2, type: 3}
   - {fileID: 122268285079091143, guid: 1a61fd763a59cf14991dade04c3c48a2, type: 3}
@@ -1718,6 +1717,7 @@ SpriteAtlas:
   - {fileID: -2431439944167368855, guid: 1a61fd763a59cf14991dade04c3c48a2, type: 3}
   - {fileID: 7274838496166343488, guid: 1a61fd763a59cf14991dade04c3c48a2, type: 3}
   - {fileID: -8506932439865520012, guid: 1a61fd763a59cf14991dade04c3c48a2, type: 3}
+  - {fileID: 21300000, guid: aca9ccab5f6e26c40b4e9d89c3591f77, type: 3}
   - {fileID: -872947984015748712, guid: 58ce1abc3998623408b18b91b0e357f2, type: 3}
   - {fileID: 4004008643541842471, guid: 58ce1abc3998623408b18b91b0e357f2, type: 3}
   - {fileID: 6703265110210787806, guid: 58ce1abc3998623408b18b91b0e357f2, type: 3}
@@ -3334,7 +3334,6 @@ SpriteAtlas:
   - character_10
   - character_59
   - character_11
-  - character_12
   - character_13
   - character_38
   - character_39
@@ -3404,6 +3403,7 @@ SpriteAtlas:
   - character_73
   - character_70
   - character_71
+  - key
   - modified gfx melee sprites_15
   - modified gfx melee sprites_14
   - modified gfx melee sprites_13

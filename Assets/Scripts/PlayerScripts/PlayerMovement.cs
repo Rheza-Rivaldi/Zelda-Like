@@ -14,6 +14,9 @@ public class PlayerMovement : MonoBehaviour
     }
     public PlayerState currentState;
 
+    public Inventory playerInventory;
+    public SpriteRenderer obtainedItemSprite;
+
     public float speed;
     private Rigidbody2D myRigidbody;
     private Vector3 change;
@@ -37,6 +40,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(currentState == PlayerState.interact){
+            return;
+        }
+
         change = Vector3.zero;
         change.x = Input.GetAxisRaw("Horizontal");
         change.y = Input.GetAxisRaw("Vertical");
@@ -55,7 +62,25 @@ public class PlayerMovement : MonoBehaviour
         yield return null;
         animator.SetBool("attacking", false);
         yield return new WaitForSeconds(0.4f);
-        currentState = PlayerState.idle;
+        if(currentState != PlayerState.interact){
+            currentState = PlayerState.idle;
+        }
+    }
+
+    public void RaiseItem(){
+        if(playerInventory.currentItem != null){
+            if(currentState != PlayerState.interact){
+                animator.SetBool("ObtainItem", true);
+                currentState = PlayerState.interact;
+                obtainedItemSprite.sprite = playerInventory.currentItem.itemSprite;
+            }
+            else{
+                animator.SetBool("ObtainItem", false);
+                currentState = PlayerState.idle;
+                obtainedItemSprite.sprite = null;
+                playerInventory.currentItem = null;
+            }
+        }
     }
 
     void UpdateAnimationAndMove(){
