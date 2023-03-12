@@ -17,6 +17,8 @@ public class Enemy : MonoBehaviour
     public string enemyName;
     public int baseAttack;
     public float moveSpeed;
+
+    public GameObject deathAnimPrefab;
     
     private void Awake() {
         health = maxHealth.initialValue;
@@ -25,7 +27,15 @@ public class Enemy : MonoBehaviour
     private void TakeDamage(float damage){
         health -= damage;
         if(health <= 0){
+            DeathAnim();
             this.gameObject.SetActive(false);
+        }
+    }
+
+    void DeathAnim(){
+        if(deathAnimPrefab != null){
+            GameObject effect = Instantiate(deathAnimPrefab, transform.position, Quaternion.identity);
+            Destroy(effect, 1f);
         }
     }
 

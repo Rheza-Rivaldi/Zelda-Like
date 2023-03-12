@@ -3539,7 +3539,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 68
-      m_TileSpriteIndex: 6
+      m_TileSpriteIndex: 7
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3879,7 +3879,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 67
-      m_TileSpriteIndex: 5
+      m_TileSpriteIndex: 6
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -4219,7 +4219,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 66
-      m_TileSpriteIndex: 4
+      m_TileSpriteIndex: 5
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -4799,7 +4799,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 65
-      m_TileSpriteIndex: 3
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -13586,6 +13586,8 @@ Tilemap:
     m_Data: {fileID: -2048850230767714328, guid: 40b03a40d7f4f1841a1a244cdf9ee8cb, type: 3}
   - m_RefCount: 25
     m_Data: {fileID: -241148584306234575, guid: 40b03a40d7f4f1841a1a244cdf9ee8cb, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 910586892670836444, guid: 40b03a40d7f4f1841a1a244cdf9ee8cb, type: 3}
   - m_RefCount: 1
@@ -13594,8 +13596,6 @@ Tilemap:
     m_Data: {fileID: -4921910590179857983, guid: 40b03a40d7f4f1841a1a244cdf9ee8cb, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -9097635615592755817, guid: 40b03a40d7f4f1841a1a244cdf9ee8cb, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -5038225484044859109, guid: 40b03a40d7f4f1841a1a244cdf9ee8cb, type: 3}
   - m_RefCount: 1
@@ -17492,6 +17492,7 @@ MonoBehaviour:
   enemyName: Patrol Log
   baseAttack: 1
   moveSpeed: 1.5
+  deathAnimPrefab: {fileID: 0}
   myRigidBody: {fileID: 0}
   target: {fileID: 0}
   originalPosition: {x: 0, y: 0, z: 0}
