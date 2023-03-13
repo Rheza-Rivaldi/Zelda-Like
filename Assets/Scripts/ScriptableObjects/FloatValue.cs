@@ -7,7 +7,6 @@ public class FloatValue : ScriptableObject, ISerializationCallbackReceiver
 {
     public float initialValue;
 
-    [HideInInspector]
     public float RuntimeValue;
 
     public void OnAfterDeserialize(){

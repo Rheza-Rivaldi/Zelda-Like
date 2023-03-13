@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     public FloatValue currentHealth;
     public Signal playerHealthSignal;
+    public Signal shakeScreen;
 
     public VectorValue startingPosition;
 
@@ -115,6 +116,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private IEnumerator DoKnockback(float knockbackDuration){
+        shakeScreen.RaiseSignal();
         if(myRigidbody != null){
             yield return new WaitForSeconds(knockbackDuration);
             myRigidbody.velocity = Vector2.zero;
