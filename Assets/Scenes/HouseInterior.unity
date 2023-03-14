@@ -179,6 +179,14 @@ PrefabInstance:
       value: Scene Transition
       objectReference: {fileID: 0}
     - target: {fileID: 8761119821991208096, guid: bdd4f9fa97ceb5b4f87f8803547ea4d6, type: 3}
+      propertyPath: camMax
+      value: 
+      objectReference: {fileID: 11400000, guid: 5d55fad8cffc02f44a4f59cc2bbfa6c8, type: 2}
+    - target: {fileID: 8761119821991208096, guid: bdd4f9fa97ceb5b4f87f8803547ea4d6, type: 3}
+      propertyPath: camMin
+      value: 
+      objectReference: {fileID: 11400000, guid: b3b1d4377efd3684cb55808c9c926723, type: 2}
+    - target: {fileID: 8761119821991208096, guid: bdd4f9fa97ceb5b4f87f8803547ea4d6, type: 3}
       propertyPath: fadeIn
       value: 
       objectReference: {fileID: 1417162239135640768, guid: a669262538aacdb4c899349a2c2bc617, type: 3}
@@ -189,6 +197,22 @@ PrefabInstance:
     - target: {fileID: 8761119821991208096, guid: bdd4f9fa97ceb5b4f87f8803547ea4d6, type: 3}
       propertyPath: fadeWait
       value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8761119821991208096, guid: bdd4f9fa97ceb5b4f87f8803547ea4d6, type: 3}
+      propertyPath: camNewMax.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8761119821991208096, guid: bdd4f9fa97ceb5b4f87f8803547ea4d6, type: 3}
+      propertyPath: camNewMax.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8761119821991208096, guid: bdd4f9fa97ceb5b4f87f8803547ea4d6, type: 3}
+      propertyPath: camNewMin.x
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8761119821991208096, guid: bdd4f9fa97ceb5b4f87f8803547ea4d6, type: 3}
+      propertyPath: camNewMin.y
+      value: -12
       objectReference: {fileID: 0}
     - target: {fileID: 8761119821991208096, guid: bdd4f9fa97ceb5b4f87f8803547ea4d6, type: 3}
       propertyPath: sceneToLoad

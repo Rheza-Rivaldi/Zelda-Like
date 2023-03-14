@@ -71,3 +71,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: 
+  playerPosition: {x: 0, y: 0}
+  savePlayerPosition: {fileID: 11400000, guid: 93bacb06a5890054f800529158e5fa94, type: 2}
+  camNewMin: {x: 0, y: 0}
+  camNewMax: {x: 0, y: 0}
+  camMin: {fileID: 0}
+  camMax: {fileID: 0}
+  fadeIn: {fileID: 1417162239135640768, guid: a669262538aacdb4c899349a2c2bc617, type: 3}
+  fadeOut: {fileID: 2436192257930339330, guid: f4d8689d4de060948810991f261c7ef2, type: 3}
+  fadeWait: 0.4

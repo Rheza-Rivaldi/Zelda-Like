@@ -39,8 +39,10 @@
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\ContextClue.cs" />
+     <Compile Include="Assets\Scripts\Objects\PowerUp.cs" />
      <Compile Include="Assets\Scripts\RoomMove.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\Inventory.cs" />
+     <Compile Include="Assets\Scripts\PlayerScripts\CoinTextManager.cs" />
      <Compile Include="Assets\Scripts\SceneTransition.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\HeartManager.cs" />
      <Compile Include="Assets\Scripts\Enemy Scripts\PatrolLog.cs" />
@@ -48,6 +50,8 @@
      <Compile Include="Assets\Scripts\Objects\Interactable.cs" />
      <Compile Include="Assets\Scripts\Knockback.cs" />
      <Compile Include="Assets\Scripts\Objects\Door.cs" />
+     <Compile Include="Assets\Scripts\Objects\Coin.cs" />
+     <Compile Include="Assets\Scripts\Objects\Heart.cs" />
      <Compile Include="Assets\Scripts\Enemy Scripts\Log.cs" />
      <Compile Include="Assets\Scripts\SignalListener.cs" />
      <Compile Include="Assets\Scripts\Enemy Scripts\Enemy.cs" />
@@ -58,10 +62,7 @@
      <Compile Include="Assets\Scripts\ScriptableObjects\FloatValue.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\VectorValue.cs" />
      <Compile Include="Assets\Scripts\Objects\TreasureChest.cs" />
-     <Compile Include="Assets\Scripts\Objects\Heart.cs" />
-     <Compile Include="Assets\Scripts\Objects\PowerUp.cs" />
-     <Compile Include="Assets\Scripts\Objects\Coin.cs" />
-     <Compile Include="Assets\Scripts\PlayerScripts\CoinTextManager.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\BoolValue.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

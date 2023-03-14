@@ -401,6 +401,8 @@ MonoBehaviour:
   smoothing: 0.01
   maxPosition: {x: 6.1, y: 8}
   minPosition: {x: -6.1, y: -12}
+  camMin: {fileID: 11400000, guid: b3b1d4377efd3684cb55808c9c926723, type: 2}
+  camMax: {fileID: 11400000, guid: 5d55fad8cffc02f44a4f59cc2bbfa6c8, type: 2}
   anim: {fileID: 0}
 --- !u!20 &519420031
 Camera:
@@ -853,9 +855,9 @@ GameObject:
   - component: {fileID: 856952106}
   - component: {fileID: 856952105}
   m_Layer: 0
-  m_Name: TreasureChest
+  m_Name: TreasureChest1
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -876,6 +878,7 @@ MonoBehaviour:
   contents: {fileID: 11400000, guid: 85b5571d5b7a07b419e1964ce86dc47a, type: 2}
   playerInventory: {fileID: 11400000, guid: 731b135db73d2d14a84ade0d6fd9edaa, type: 2}
   isOpen: 0
+  currentChestState: {fileID: 11400000, guid: f56b5396f0dfc044f83f5891397e139d, type: 2}
   raiseItem: {fileID: 11400000, guid: ce184dfb8444e0843a7f174dc3695ade, type: 2}
   dialogBox: {fileID: 745738559}
   dialogText: {fileID: 699545080}
@@ -16932,6 +16935,14 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8761119821991208096, guid: bdd4f9fa97ceb5b4f87f8803547ea4d6, type: 3}
+      propertyPath: camMax
+      value: 
+      objectReference: {fileID: 11400000, guid: 513fe02a3475cb14ea2035a5739bf499, type: 2}
+    - target: {fileID: 8761119821991208096, guid: bdd4f9fa97ceb5b4f87f8803547ea4d6, type: 3}
+      propertyPath: camMin
+      value: 
+      objectReference: {fileID: 11400000, guid: f7198ceab2329454c83f6a92b51c0212, type: 2}
+    - target: {fileID: 8761119821991208096, guid: bdd4f9fa97ceb5b4f87f8803547ea4d6, type: 3}
       propertyPath: fadeIn
       value: 
       objectReference: {fileID: 1417162239135640768, guid: a669262538aacdb4c899349a2c2bc617, type: 3}
@@ -17234,11 +17245,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1091535960606642713, guid: bdd4f9fa97ceb5b4f87f8803547ea4d6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -20.5
+      value: -20.49
       objectReference: {fileID: 0}
     - target: {fileID: 1091535960606642713, guid: bdd4f9fa97ceb5b4f87f8803547ea4d6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -94.430214
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1091535960606642713, guid: bdd4f9fa97ceb5b4f87f8803547ea4d6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -17309,6 +17320,14 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8761119821991208096, guid: bdd4f9fa97ceb5b4f87f8803547ea4d6, type: 3}
+      propertyPath: camMax
+      value: 
+      objectReference: {fileID: 11400000, guid: 042b21fbfc324c248990e95d8911a9f5, type: 2}
+    - target: {fileID: 8761119821991208096, guid: bdd4f9fa97ceb5b4f87f8803547ea4d6, type: 3}
+      propertyPath: camMin
+      value: 
+      objectReference: {fileID: 11400000, guid: fb7f0aa307fb24b4bab7dd68fcaa917f, type: 2}
+    - target: {fileID: 8761119821991208096, guid: bdd4f9fa97ceb5b4f87f8803547ea4d6, type: 3}
       propertyPath: fadeIn
       value: 
       objectReference: {fileID: 1417162239135640768, guid: a669262538aacdb4c899349a2c2bc617, type: 3}
@@ -17319,6 +17338,22 @@ PrefabInstance:
     - target: {fileID: 8761119821991208096, guid: bdd4f9fa97ceb5b4f87f8803547ea4d6, type: 3}
       propertyPath: fadeWait
       value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8761119821991208096, guid: bdd4f9fa97ceb5b4f87f8803547ea4d6, type: 3}
+      propertyPath: camNewMax.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8761119821991208096, guid: bdd4f9fa97ceb5b4f87f8803547ea4d6, type: 3}
+      propertyPath: camNewMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8761119821991208096, guid: bdd4f9fa97ceb5b4f87f8803547ea4d6, type: 3}
+      propertyPath: camNewMin.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8761119821991208096, guid: bdd4f9fa97ceb5b4f87f8803547ea4d6, type: 3}
+      propertyPath: camNewMin.y
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8761119821991208096, guid: bdd4f9fa97ceb5b4f87f8803547ea4d6, type: 3}
       propertyPath: sceneToLoad

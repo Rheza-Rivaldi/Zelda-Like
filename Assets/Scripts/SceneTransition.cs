@@ -8,6 +8,10 @@ public class SceneTransition : MonoBehaviour
     public string sceneToLoad;
     public Vector2 playerPosition;
     public VectorValue savePlayerPosition;
+    public Vector2 camNewMin;
+    public Vector2 camNewMax;
+    public VectorValue camMin;
+    public VectorValue camMax;
 
     public GameObject fadeIn;
     public GameObject fadeOut;
@@ -33,9 +37,15 @@ public class SceneTransition : MonoBehaviour
             Instantiate(fadeOut, Vector3.zero, Quaternion.identity);
         }
         yield return new WaitForSeconds(fadeWait);
+        ResetCameraBounds();
         AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneToLoad);
         while(!asyncOperation.isDone){
             yield return null;
         }
+    }
+
+    public void ResetCameraBounds(){
+        camMax.initialValue = camNewMax;
+        camMin.initialValue = camNewMin;
     }
 }

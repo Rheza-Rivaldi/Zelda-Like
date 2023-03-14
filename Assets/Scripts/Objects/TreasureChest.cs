@@ -8,6 +8,7 @@ public class TreasureChest : Interactable
     public Item contents;
     public Inventory playerInventory;
     public bool isOpen;
+    public BoolValue currentChestState;
     public Signal raiseItem;
     public GameObject dialogBox;
     public Text dialogText;
@@ -17,7 +18,9 @@ public class TreasureChest : Interactable
     // Start is called before the first frame update
     void Start()
     {
+        isOpen = currentChestState.runtimeValue;
         anim = GetComponent<Animator>();
+        anim.SetBool("Opened", currentChestState.runtimeValue);
     }
 
     // Update is called once per frame
@@ -47,6 +50,7 @@ public class TreasureChest : Interactable
 
         isOpen = true;
         anim.SetBool("Opened", true);
+        currentChestState.runtimeValue = true;
 
     }
     public void EmptyChest(){
