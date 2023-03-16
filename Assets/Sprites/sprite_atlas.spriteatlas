@@ -1211,6 +1211,7 @@ SpriteAtlas:
   - {fileID: 6469460937200175538, guid: 40b03a40d7f4f1841a1a244cdf9ee8cb, type: 3}
   - {fileID: 2924928888349640390, guid: 40b03a40d7f4f1841a1a244cdf9ee8cb, type: 3}
   - {fileID: 21300000, guid: a7dd0e707a8d4e54b803f35f87d05af7, type: 3}
+  - {fileID: -8109198643628229234, guid: 8bb2a701796d2c84e85d3b065768d7a4, type: 3}
   - {fileID: -1986772863260763996, guid: 8bb2a701796d2c84e85d3b065768d7a4, type: 3}
   - {fileID: 5760800594879907098, guid: 8bb2a701796d2c84e85d3b065768d7a4, type: 3}
   - {fileID: 7597474578557255370, guid: 8bb2a701796d2c84e85d3b065768d7a4, type: 3}
@@ -1298,6 +1299,7 @@ SpriteAtlas:
   - {fileID: -1760756981417539202, guid: 8bb2a701796d2c84e85d3b065768d7a4, type: 3}
   - {fileID: 8626818278983215672, guid: 8bb2a701796d2c84e85d3b065768d7a4, type: 3}
   - {fileID: 228074669703589773, guid: 8bb2a701796d2c84e85d3b065768d7a4, type: 3}
+  - {fileID: -4075620430031724872, guid: 8bb2a701796d2c84e85d3b065768d7a4, type: 3}
   - {fileID: -6050296909894318094, guid: 8bb2a701796d2c84e85d3b065768d7a4, type: 3}
   - {fileID: -6429866276832845431, guid: 8bb2a701796d2c84e85d3b065768d7a4, type: 3}
   - {fileID: -3727842135710763035, guid: 8bb2a701796d2c84e85d3b065768d7a4, type: 3}
@@ -3018,6 +3020,7 @@ SpriteAtlas:
   - Overworld_673
   - Overworld_129
   - door
+  - Switch_On
   - objects_71
   - objects_70
   - objects_73
@@ -3105,6 +3108,7 @@ SpriteAtlas:
   - objects_122
   - objects_121
   - objects_120
+  - Switch_Off
   - objects_17
   - objects_48
   - objects_16

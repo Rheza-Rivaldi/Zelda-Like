@@ -58,7 +58,7 @@ public class Log : Enemy
         }
     }
 
-    void SetAnimFloat(Vector2 setVector){
+    public void SetAnimFloat(Vector2 setVector){
         anim.SetFloat("moveX", setVector.x);
         anim.SetFloat("moveY", setVector.y);
     }
@@ -82,7 +82,7 @@ public class Log : Enemy
         }
     }
 
-    void ChangeState(enemyState newState){
+    public void ChangeState(enemyState newState){
         if(currentState != newState){
             currentState = newState;
         }
