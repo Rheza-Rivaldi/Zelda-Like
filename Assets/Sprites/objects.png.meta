@@ -79,7 +79,7 @@ TextureImporter:
     second: objects_24
   - first:
       213: 8753186556605219898
-    second: objects_25
+    second: Rock
   - first:
       213: -8841936248928892492
     second: objects_26
@@ -1063,15 +1063,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: objects_25
+      name: Rock
       rect:
         serializedVersion: 2
         x: 277
         y: 293
         width: 6
         height: 6
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
