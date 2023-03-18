@@ -213,10 +213,11 @@ MonoBehaviour:
   enemyName: Patrol Log
   baseAttack: 1
   moveSpeed: 1.5
-  deathAnimPrefab: {fileID: 0}
+  originalPosition: {x: 0, y: 0, z: 0}
+  deathAnimPrefab: {fileID: 1984088940604871455, guid: 467d2d78d1bd1be4583b4ecbcbb06f4a, type: 3}
+  deathSignal: {fileID: 11400000, guid: 63845748a2ebb504a86d83f820cee5aa, type: 2}
   myRigidBody: {fileID: 0}
   target: {fileID: 0}
-  originalPosition: {x: 0, y: 0, z: 0}
   chaseRadius: 4
   attackRadius: 1.2
   anim: {fileID: 0}

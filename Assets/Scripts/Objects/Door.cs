@@ -31,6 +31,7 @@ public class Door : Interactable
         doorGameobject.SetActive(false);
     }
     public void CloseDoor(){
-
+        open = false;
+        doorGameobject.SetActive(true);
     }
 }

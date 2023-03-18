@@ -17,16 +17,23 @@ public class Enemy : MonoBehaviour
     public string enemyName;
     public int baseAttack;
     public float moveSpeed;
+    public Vector3 originalPosition;
 
     public GameObject deathAnimPrefab;
+    public Signal deathSignal;
     
     private void Awake() {
         health = maxHealth.initialValue;
     }
 
+    private void OnEnable() {
+        transform.position = originalPosition;
+    }
+
     private void TakeDamage(float damage){
         health -= damage;
         if(health <= 0){
+            deathSignal.RaiseSignal();
             DeathAnim();
             this.gameObject.SetActive(false);
         }

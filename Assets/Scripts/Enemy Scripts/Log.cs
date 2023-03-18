@@ -6,7 +6,6 @@ public class Log : Enemy
 {
     public Rigidbody2D myRigidBody;
     public Transform target;
-    public Vector3 originalPosition;
     public float chaseRadius;
     public float attackRadius;
     public Animator anim;
