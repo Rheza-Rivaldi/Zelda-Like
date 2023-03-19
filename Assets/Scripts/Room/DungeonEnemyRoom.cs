@@ -31,6 +31,8 @@ public class DungeonEnemyRoom : DungeonRoom
 
             CloseDoors();
             enemyCounter = enemies.Length;
+
+            virtualCamera.SetActive(true);
         }
         
     }

@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour
 
     public GameObject deathAnimPrefab;
     public Signal deathSignal;
+    public LootTable thisLoot;
     
     private void Awake() {
         health = maxHealth.initialValue;
@@ -28,14 +29,27 @@ public class Enemy : MonoBehaviour
 
     private void OnEnable() {
         transform.position = originalPosition;
+        health = maxHealth.initialValue;
     }
 
     private void TakeDamage(float damage){
         health -= damage;
         if(health <= 0){
-            deathSignal.RaiseSignal();
+            if(deathSignal != null){
+                deathSignal.RaiseSignal();
+            }
             DeathAnim();
+            MakeLoot();
             this.gameObject.SetActive(false);
+        }
+    }
+
+    void MakeLoot(){
+        if(thisLoot.loots != null){
+            PowerUp current = thisLoot.dropLoots();
+            if(current != null){
+                Instantiate(current.gameObject, transform.position, Quaternion.identity);
+            }
         }
     }
 

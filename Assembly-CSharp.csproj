@@ -36,12 +36,14 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Room\DungeonRoom.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\ContextClue.cs" />
      <Compile Include="Assets\Scripts\Objects\PowerUp.cs" />
      <Compile Include="Assets\Scripts\Objects\Projectile.cs" />
      <Compile Include="Assets\Scripts\RoomMove.cs" />
+     <Compile Include="Assets\Scripts\Room\BaseRoom.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\Inventory.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\CoinTextManager.cs" />
      <Compile Include="Assets\Scripts\SceneTransition.cs" />
@@ -54,8 +56,10 @@
      <Compile Include="Assets\Scripts\Knockback.cs" />
      <Compile Include="Assets\Scripts\Objects\Door.cs" />
      <Compile Include="Assets\Scripts\Enemy Scripts\TurretLog.cs" />
+     <Compile Include="Assets\Scripts\Room\OverworldRoom.cs" />
      <Compile Include="Assets\Scripts\Objects\Coin.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\BoolValue.cs" />
+     <Compile Include="Assets\Scripts\Room\DungeonEnemyRoom.cs" />
      <Compile Include="Assets\Scripts\Objects\Heart.cs" />
      <Compile Include="Assets\Scripts\Enemy Scripts\Log.cs" />
      <Compile Include="Assets\Scripts\Enemy Scripts\AreaEnemy.cs" />
@@ -68,10 +72,7 @@
      <Compile Include="Assets\Scripts\ScriptableObjects\FloatValue.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\VectorValue.cs" />
      <Compile Include="Assets\Scripts\Objects\TreasureChest.cs" />
-     <Compile Include="Assets\Scripts\Room\BaseRoom.cs" />
-     <Compile Include="Assets\Scripts\Room\OverworldRoom.cs" />
-     <Compile Include="Assets\Scripts\Room\DungeonRoom.cs" />
-     <Compile Include="Assets\Scripts\Room\DungeonEnemyRoom.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\LootTable.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -752,6 +753,12 @@
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime">
         <HintPath>D:\Unity Files\UnityProjects\Zelda Like\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+        <HintPath>D:\Unity Files\UnityProjects\Zelda Like\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+        <HintPath>D:\Unity Files\UnityProjects\Zelda Like\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

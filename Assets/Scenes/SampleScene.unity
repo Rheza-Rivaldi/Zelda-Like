@@ -396,6 +396,7 @@ GameObject:
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
   - component: {fileID: 519420034}
+  - component: {fileID: 519420035}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -457,7 +458,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4.2
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -480,8 +481,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.34, y: -0.63, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -534,6 +535,40 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &519420035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowDebugText: 0
+  m_ShowCameraFrustum: 1
+  m_IgnoreTimeScale: 0
+  m_WorldUpOverride: {fileID: 0}
+  m_UpdateMethod: 2
+  m_BlendUpdateMethod: 1
+  m_DefaultBlend:
+    m_Style: 1
+    m_Time: 0.75
+    m_CustomCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  m_CustomBlends: {fileID: 0}
+  m_CameraCutEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &525452646
 GameObject:
   m_ObjectHideFlags: 0
@@ -17287,6 +17322,8 @@ MonoBehaviour:
   moveSpeed: 1.5
   originalPosition: {x: 8, y: 7.5, z: 0}
   deathAnimPrefab: {fileID: 1984088940604871455, guid: 467d2d78d1bd1be4583b4ecbcbb06f4a, type: 3}
+  deathSignal: {fileID: 0}
+  thisLoot: {fileID: 11400000, guid: 28ed1fb4042571c4db14bc4a0038ffa0, type: 2}
   myRigidBody: {fileID: 0}
   target: {fileID: 0}
   chaseRadius: 4
@@ -82460,6 +82497,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2206136533858100785, guid: bd066bd2be1cd164d92959be3cbc7555, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3511388645767774825, guid: bd066bd2be1cd164d92959be3cbc7555, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -82540,6 +82581,26 @@ PrefabInstance:
       propertyPath: enemies.Array.data[1]
       value: 
       objectReference: {fileID: 1035024056}
+    - target: {fileID: 3988237215269426793, guid: bd066bd2be1cd164d92959be3cbc7555, type: 3}
+      propertyPath: m_Follow
+      value: 
+      objectReference: {fileID: 1970304929}
+    - target: {fileID: 5516649967636157230, guid: bd066bd2be1cd164d92959be3cbc7555, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5516649967636157230, guid: bd066bd2be1cd164d92959be3cbc7555, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 5516649967636157230, guid: bd066bd2be1cd164d92959be3cbc7555, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 5516649967636157230, guid: bd066bd2be1cd164d92959be3cbc7555, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd066bd2be1cd164d92959be3cbc7555, type: 3}
 --- !u!4 &2028496244 stripped
@@ -82665,6 +82726,8 @@ MonoBehaviour:
   moveSpeed: 1.5
   originalPosition: {x: 6.5, y: -4.5, z: 0}
   deathAnimPrefab: {fileID: 1984088940604871455, guid: 467d2d78d1bd1be4583b4ecbcbb06f4a, type: 3}
+  deathSignal: {fileID: 0}
+  thisLoot: {fileID: 11400000, guid: 28ed1fb4042571c4db14bc4a0038ffa0, type: 2}
   myRigidBody: {fileID: 0}
   target: {fileID: 0}
   chaseRadius: 4
