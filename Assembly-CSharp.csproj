@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\Objects\Switch.cs" />
      <Compile Include="Assets\Scripts\Knockback.cs" />
      <Compile Include="Assets\Scripts\Objects\Door.cs" />
+     <Compile Include="Assets\Scripts\Enemy Scripts\MeleeEnemy.cs" />
      <Compile Include="Assets\Scripts\Enemy Scripts\TurretLog.cs" />
      <Compile Include="Assets\Scripts\Room\OverworldRoom.cs" />
      <Compile Include="Assets\Scripts\Objects\Coin.cs" />
@@ -73,7 +74,7 @@
      <Compile Include="Assets\Scripts\ScriptableObjects\FloatValue.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\VectorValue.cs" />
      <Compile Include="Assets\Scripts\Objects\TreasureChest.cs" />
-     <Compile Include="Assets\Scripts\Enemy Scripts\MeleeEnemy.cs" />
+     <Compile Include="Assets\Scripts\Objects\Arrow.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

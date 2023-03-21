@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3414743145029143694}
   - component: {fileID: 6356410855132155020}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ContextClue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 7408107855911432626}
   - component: {fileID: 6209602354498335858}
   - component: {fileID: 4543269597215538270}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ObtainItem
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 5805337604607448248}
   - component: {fileID: 5805337604607448255}
   - component: {fileID: 5805337604607448254}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DownHitBox
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -281,7 +281,7 @@ GameObject:
   - component: {fileID: 5805337604681336306}
   - component: {fileID: 5805337604681336305}
   - component: {fileID: 5805337604681336304}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHitBox
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -358,7 +358,7 @@ GameObject:
   - component: {fileID: 5805337604697632952}
   - component: {fileID: 5805337604697632959}
   - component: {fileID: 5805337604697632958}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: UpHitBox
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -435,7 +435,7 @@ GameObject:
   - component: {fileID: 5805337605332385909}
   - component: {fileID: 5805337605332385908}
   - component: {fileID: 5805337605332385899}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHitBox
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -519,7 +519,7 @@ GameObject:
   - component: {fileID: 7546859745426142002}
   - component: {fileID: 4717992373835010043}
   - component: {fileID: 716455666565323371}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -663,6 +663,7 @@ MonoBehaviour:
   currentHealth: {fileID: 11400000, guid: 36d1ea290050fa54e9bcf2d66dec8a6f, type: 2}
   playerHealthSignal: {fileID: 11400000, guid: 2edf52dd02fb1ca4689b83c425e162fc, type: 2}
   shakeScreen: {fileID: 11400000, guid: b57cd60c8885209429fae497a956bae9, type: 2}
+  projectile: {fileID: 1362424702614333345, guid: a2bf03cd2f28c9446a63a55cc2e4f5c9, type: 3}
   startingPosition: {fileID: 11400000, guid: 93bacb06a5890054f800529158e5fa94, type: 2}
 --- !u!95 &5805337605938792478
 Animator:

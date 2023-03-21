@@ -15,7 +15,7 @@ public class Door : Interactable
     public GameObject doorGameobject;
 
     private void Update() {
-        if(Input.GetKeyDown(KeyCode.Z)){
+        if(Input.GetButtonDown("Interact")){
             if(playerInRange && thisDoorType == DoorType.key){
                 //check key amount
                 if(playerInventory.numberOfKeys > 0){

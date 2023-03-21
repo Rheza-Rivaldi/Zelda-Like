@@ -1756,6 +1756,8 @@ SpriteAtlas:
   - {fileID: -8041784067552993899, guid: 58ce1abc3998623408b18b91b0e357f2, type: 3}
   - {fileID: 1532286108747742640, guid: 58ce1abc3998623408b18b91b0e357f2, type: 3}
   - {fileID: 147799070741053269, guid: 58ce1abc3998623408b18b91b0e357f2, type: 3}
+  - {fileID: 21300000, guid: e67167fc3aa68d54ba306eb93c4c4d22, type: 3}
+  - {fileID: 21300000, guid: e89a212d8057c4b4fbb7ad9da189a6f7, type: 3}
   - {fileID: 2313419830122661008, guid: 720fd7ce04dd5e84d8c9add33e0dc852, type: 3}
   - {fileID: 6349480184285452005, guid: 720fd7ce04dd5e84d8c9add33e0dc852, type: 3}
   - {fileID: -5951506096933670981, guid: 720fd7ce04dd5e84d8c9add33e0dc852, type: 3}
@@ -3597,6 +3599,8 @@ SpriteAtlas:
   - modified gfx melee sprites_1
   - modified gfx melee sprites_2
   - modified gfx melee sprites_3
+  - bow
+  - arrow
   - cave_50
   - cave_51
   - cave_52

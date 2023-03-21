@@ -25,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     public Signal playerHealthSignal;
     public Signal shakeScreen;
 
+    public GameObject projectile;
+
     public VectorValue startingPosition;
 
     // Start is called before the first frame update
@@ -51,6 +53,9 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetButtonDown("Attack") && currentState != PlayerState.attack && currentState != PlayerState.stagger){
             StartCoroutine(AttackAnim());
         }
+        else if(Input.GetButtonDown("Projectile") && currentState != PlayerState.attack && currentState != PlayerState.stagger){
+            StartCoroutine(ProjectileAnim());
+        }
         else if(currentState == PlayerState.idle){
             UpdateAnimationAndMove();
         }
@@ -66,6 +71,29 @@ public class PlayerMovement : MonoBehaviour
         if(currentState != PlayerState.interact){
             currentState = PlayerState.idle;
         }
+    }
+
+    private IEnumerator ProjectileAnim(){
+        //animator.SetBool("attacking", true);
+        currentState = PlayerState.attack;
+        yield return null;
+        MakeArrow();
+        //animator.SetBool("attacking", false);
+        yield return new WaitForSeconds(0.4f);
+        if(currentState != PlayerState.interact){
+            currentState = PlayerState.idle;
+        }
+    }
+
+    void MakeArrow(){
+        Vector2 temp = new Vector2(animator.GetFloat("moveX"), animator.GetFloat("moveY"));
+        Arrow arrow = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Arrow>();
+        arrow.Setup(temp, ArrowDirection());
+    }
+
+    Vector3 ArrowDirection(){
+        float temp = Mathf.Atan2(animator.GetFloat("moveY"), animator.GetFloat("moveX")) * Mathf.Rad2Deg;
+        return new Vector3(0,0, temp);
     }
 
     public void RaiseItem(){
