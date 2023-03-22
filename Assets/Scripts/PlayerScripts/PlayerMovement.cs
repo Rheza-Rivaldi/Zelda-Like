@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     public Signal shakeScreen;
 
     public GameObject projectile;
+    public Signal useMP;
 
     public VectorValue startingPosition;
 
@@ -53,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetButtonDown("Attack") && currentState != PlayerState.attack && currentState != PlayerState.stagger){
             StartCoroutine(AttackAnim());
         }
-        else if(Input.GetButtonDown("Projectile") && currentState != PlayerState.attack && currentState != PlayerState.stagger){
+        else if(Input.GetButtonDown("Projectile") && currentState != PlayerState.attack && currentState != PlayerState.stagger && playerInventory.currentMP > 0){
             StartCoroutine(ProjectileAnim());
         }
         else if(currentState == PlayerState.idle){
@@ -89,6 +90,7 @@ public class PlayerMovement : MonoBehaviour
         Vector2 temp = new Vector2(animator.GetFloat("moveX"), animator.GetFloat("moveY"));
         Arrow arrow = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Arrow>();
         arrow.Setup(temp, ArrowDirection());
+        useMP.RaiseSignal();
     }
 
     Vector3 ArrowDirection(){

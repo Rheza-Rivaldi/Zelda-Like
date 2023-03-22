@@ -664,6 +664,7 @@ MonoBehaviour:
   playerHealthSignal: {fileID: 11400000, guid: 2edf52dd02fb1ca4689b83c425e162fc, type: 2}
   shakeScreen: {fileID: 11400000, guid: b57cd60c8885209429fae497a956bae9, type: 2}
   projectile: {fileID: 1362424702614333345, guid: a2bf03cd2f28c9446a63a55cc2e4f5c9, type: 3}
+  useMP: {fileID: 11400000, guid: 362f6cbe57dd3084cabbbb08c49ff90a, type: 2}
   startingPosition: {fileID: 11400000, guid: 93bacb06a5890054f800529158e5fa94, type: 2}
 --- !u!95 &5805337605938792478
 Animator:
