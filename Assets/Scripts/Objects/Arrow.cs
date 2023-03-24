@@ -6,6 +6,7 @@ public class Arrow : MonoBehaviour
 {
     public Rigidbody2D myRigidbody;
     public float speed;
+    public float mPCost;
 
 
     // Start is called before the first frame update

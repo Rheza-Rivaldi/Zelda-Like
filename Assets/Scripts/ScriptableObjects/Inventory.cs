@@ -23,4 +23,8 @@ public class Inventory : ScriptableObject
             }
         }
     }
+
+    public void MPUsage(float mPCost){
+        currentMP -= mPCost;
+    }
 }

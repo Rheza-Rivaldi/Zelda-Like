@@ -16,20 +16,21 @@ public class MPManager : MonoBehaviour
         playerInventory.currentMP = playerInventory.maxMP;
     }
 
-    public void IncreaseMP(){
-        playerInventory.currentMP += 1;
+    public void UpdateMP(){
         if(playerInventory.currentMP > mPSlider.maxValue){
             playerInventory.currentMP = mPSlider.maxValue;
         }
-        mPSlider.value = playerInventory.currentMP;
-    }
-
-    public void DecreaseMP(){
-        playerInventory.currentMP -= 1;
-        if(playerInventory.currentMP < 0){
+        else if(playerInventory.currentMP < 0){
             playerInventory.currentMP = 0;
         }
         mPSlider.value = playerInventory.currentMP;
     }
+
+    /* public void DecreaseMP(){
+        if(playerInventory.currentMP < 0){
+            playerInventory.currentMP = 0;
+        }
+        mPSlider.value = playerInventory.currentMP;
+    } */
 
 }

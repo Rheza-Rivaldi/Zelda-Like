@@ -17840,7 +17840,6 @@ GameObject:
   - component: {fileID: 1066857398}
   - component: {fileID: 1066857399}
   - component: {fileID: 1066857400}
-  - component: {fileID: 1066857401}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -17947,41 +17946,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22f11162af1aa1440932469011cc3de4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  signal: {fileID: 11400000, guid: a3f1aeb43417d9242bb4afb3c620eb81, type: 2}
+  signal: {fileID: 11400000, guid: 0c4ed63f0fd84f342a78039dd62b5d3c, type: 2}
   signalEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1066857399}
         m_TargetAssemblyTypeName: MPManager, Assembly-CSharp
-        m_MethodName: IncreaseMP
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1066857401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1066857396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22f11162af1aa1440932469011cc3de4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  signal: {fileID: 11400000, guid: 362f6cbe57dd3084cabbbb08c49ff90a, type: 2}
-  signalEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1066857399}
-        m_TargetAssemblyTypeName: MPManager, Assembly-CSharp
-        m_MethodName: DecreaseMP
+        m_MethodName: UpdateMP
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -84198,6 +84169,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5805337605938792479, guid: 78c75aefb6ccacc4fb9016ee281f3816, type: 3}
+      propertyPath: useMP
+      value: 
+      objectReference: {fileID: 11400000, guid: 0c4ed63f0fd84f342a78039dd62b5d3c, type: 2}
     - target: {fileID: 5805337605938792479, guid: 78c75aefb6ccacc4fb9016ee281f3816, type: 3}
       propertyPath: projectile
       value: 
