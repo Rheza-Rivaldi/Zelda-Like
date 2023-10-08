@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     public Signal shakeScreen;
 
     public GameObject projectile;
+    public Item bow;
     public Signal useMP;
 
     public VectorValue startingPosition;
@@ -55,7 +56,9 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(AttackAnim());
         }
         else if(Input.GetButtonDown("Projectile") && currentState != PlayerState.attack && currentState != PlayerState.stagger && playerInventory.currentMP > 0){
-            StartCoroutine(ProjectileAnim());
+            if(playerInventory.CheckForItem(bow)){
+                StartCoroutine(ProjectileAnim());
+            }
         }
         else if(currentState == PlayerState.idle){
             UpdateAnimationAndMove();

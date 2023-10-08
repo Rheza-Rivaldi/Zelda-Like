@@ -7,12 +7,13 @@ public class Arrow : MonoBehaviour
     public Rigidbody2D myRigidbody;
     public float speed;
     public float mPCost;
-
+    public float lifetimeCounter;
 
     // Start is called before the first frame update
     void Awake()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
+        Timer(lifetimeCounter);
     }
 
     public void Setup(Vector2 target, Vector3 direction)
@@ -27,7 +28,8 @@ public class Arrow : MonoBehaviour
         }
     }
 
-    private void OnBecameInvisible() {
-        Destroy(this.gameObject, 1f);
+    private void Timer(float timeToLife) {
+        //Debug.Log("count started");
+        Destroy(this.gameObject, timeToLife);
     }
 }

@@ -24,6 +24,15 @@ public class Inventory : ScriptableObject
         }
     }
 
+    public bool CheckForItem(Item item){
+        if(items.Contains(item)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
     public void MPUsage(float mPCost){
         currentMP -= mPCost;
     }
