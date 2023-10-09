@@ -60,12 +60,14 @@
      <Compile Include="Assets\Scripts\Objects\Arrow.cs" />
      <Compile Include="Assets\Scripts\Room\OverworldRoom.cs" />
      <Compile Include="Assets\Scripts\Objects\Coin.cs" />
+     <Compile Include="Assets\Scripts\Objects\MPBottle.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\BoolValue.cs" />
      <Compile Include="Assets\Scripts\Room\DungeonEnemyRoom.cs" />
      <Compile Include="Assets\Scripts\Objects\Heart.cs" />
      <Compile Include="Assets\Scripts\Enemy Scripts\Log.cs" />
      <Compile Include="Assets\Scripts\Enemy Scripts\AreaEnemy.cs" />
      <Compile Include="Assets\Scripts\SignalListener.cs" />
+     <Compile Include="Assets\Scripts\PlayerScripts\MPManager.cs" />
      <Compile Include="Assets\Scripts\Enemy Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\LootTable.cs" />
      <Compile Include="Assets\Scripts\Objects\Pot.cs" />
@@ -75,8 +77,7 @@
      <Compile Include="Assets\Scripts\ScriptableObjects\FloatValue.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\VectorValue.cs" />
      <Compile Include="Assets\Scripts\Objects\TreasureChest.cs" />
-     <Compile Include="Assets\Scripts\PlayerScripts\MPManager.cs" />
-     <Compile Include="Assets\Scripts\Objects\MPBottle.cs" />
+     <Compile Include="Assets\Scripts\Objects\HeartContainer.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
