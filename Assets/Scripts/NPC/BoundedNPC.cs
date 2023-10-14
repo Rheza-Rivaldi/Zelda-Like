@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoundedNPC : Interactable
+public class BoundedNPC : Sign
 {
 
     private Vector3 moveDirection;
@@ -12,10 +12,18 @@ public class BoundedNPC : Interactable
     private Animator myAnim;
     public Collider2D boundaries;
 
+    private bool isMoving;
+    public float moveTime;
+    public float waitTime;
+    private float moveTimeSeconds;
+    private float waitTimeSeconds;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        moveTimeSeconds = moveTime;
+        waitTimeSeconds = waitTime;
         myTransform = GetComponent<Transform>();
         myRigidbody = GetComponent<Rigidbody2D>();
         myAnim = GetComponent<Animator>();
@@ -23,11 +31,28 @@ public class BoundedNPC : Interactable
     }
 
     // Update is called once per frame
-    void Update()
+    public override void Update()
     {
-        if(!playerInRange){
-            Move();
+        base.Update();
+        if(isMoving){
+            moveTimeSeconds -= Time.deltaTime;
+            if(moveTimeSeconds <= 0){
+                moveTimeSeconds = moveTime;
+                isMoving = false;
+            }
+            if(!playerInRange){
+                Move();
+            }
         }
+        else{
+            waitTimeSeconds -= Time.deltaTime;
+            if(waitTimeSeconds <= 0){
+                ChooseNewDirection();
+                isMoving = true;
+                waitTimeSeconds = waitTime;
+            }
+        }
+        
     }
 
     void Move(){
@@ -70,7 +95,7 @@ public class BoundedNPC : Interactable
         myAnim.SetFloat("MoveY", moveDirection.y);
     }
 
-    private void OnCollisionEnter2D(Collision2D other) {
+    void ChooseNewDirection(){
         Vector3 temp = moveDirection;
         ChangeDirection();
         int loops = 0;
@@ -78,5 +103,9 @@ public class BoundedNPC : Interactable
             loops++;
             ChangeDirection();
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) {
+        ChooseNewDirection();
     }
 }

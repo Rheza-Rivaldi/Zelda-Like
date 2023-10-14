@@ -73,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1972925835
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -2757298984738394219, guid: e9baf1e732e5590419e0024545a281ab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -114,7 +114,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2746687966460285841}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -167,8 +167,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   context: {fileID: 11400000, guid: 7b28ecd7d1314f14b8687db1c1cc252f, type: 2}
-  speed: 2
+  speed: 1.5
   boundaries: {fileID: 2746687966677116041}
+  moveTime: 1.5
+  waitTime: 0.5
 --- !u!58 &2746687966460285850
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -240,7 +242,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8, y: 7}
+  m_Size: {x: 7, y: 6}
   m_EdgeRadius: 0
 --- !u!1 &2746687967268600468
 GameObject:
