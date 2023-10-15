@@ -31,6 +31,14 @@ public class PlayerMovement : MonoBehaviour
 
     public VectorValue startingPosition;
 
+    [Header("Iframe")]
+    public Color flashColor;
+    public Color regularColor;
+    public float flashDuration;
+    public int numberOfFlashes;
+    public Collider2D triggerCollider;
+    public SpriteRenderer mySprite;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -154,9 +162,23 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator DoKnockback(float knockbackDuration){
         shakeScreen.RaiseSignal();
         if(myRigidbody != null){
+            StartCoroutine(DoFlashes());
             yield return new WaitForSeconds(knockbackDuration);
             myRigidbody.velocity = Vector2.zero;
             currentState = PlayerState.idle;
         }
+    }
+
+    private IEnumerator DoFlashes(){
+        int temp = 0;
+        triggerCollider.enabled = false;
+        while(temp < numberOfFlashes){
+            mySprite.color = flashColor;
+            yield return new WaitForSeconds(flashDuration);
+            mySprite.color = regularColor;
+            yield return new WaitForSeconds(flashDuration);
+            temp++;
+        }
+        triggerCollider.enabled = true;
     }
 }
