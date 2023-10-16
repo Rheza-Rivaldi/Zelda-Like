@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class BoolValue : ScriptableObject, ISerializationCallbackReceiver
+[System.Serializable]
+public class BoolValue : ScriptableObject//, ISerializationCallbackReceiver
 {
     public bool initialValue;
     public bool runtimeValue;
 
-    public void OnAfterDeserialize(){
+   /*  public void OnAfterDeserialize(){
         runtimeValue = initialValue;
     }
 
-    public void OnBeforeSerialize(){}
+    public void OnBeforeSerialize(){} */
 }

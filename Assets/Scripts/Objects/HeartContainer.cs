@@ -10,8 +10,10 @@ public class HeartContainer : PowerUp
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Player") && !other.isTrigger)
         {
-            heartContainer.RuntimeValue += 1;
-            playerHealth.RuntimeValue = heartContainer.RuntimeValue*2;
+            if(heartContainer.RuntimeValue <= 5){
+                heartContainer.RuntimeValue += 1;
+                playerHealth.RuntimeValue = heartContainer.RuntimeValue*2;
+            }
             powerUpSignal.RaiseSignal();
             Destroy(this.gameObject);
         }
