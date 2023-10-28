@@ -10,6 +10,14 @@ public class GameManager : MonoBehaviour
     public static GameManager gameManager;
     public List<ScriptableObject> objects = new List<ScriptableObject>();
 
+    public void ResetData(){
+        for(int i = 0; i < objects.Count; i++){
+            if(File.Exists(Application.dataPath + string.Format("/{0}.dat", i))){
+                File.Delete(Application.dataPath + string.Format("/{0}.dat", i));
+            }
+        }
+    }
+
     private void OnEnable() {
         LoadData();
     }
@@ -27,7 +35,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this); 
     }
 
-    void SaveData(){
+    public void SaveData(){
         for(int i = 0; i < objects.Count; i++){
             FileStream file = File.Create(Application.dataPath + string.Format("/{0}.dat", i));
             BinaryFormatter binary = new BinaryFormatter();
@@ -37,7 +45,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void LoadData(){
+    public void LoadData(){
         for(int i = 0; i < objects.Count; i++){
             if(File.Exists(Application.dataPath + string.Format("/{0}.dat", i))){
                 FileStream file = File.Open(Application.dataPath + string.Format("/{0}.dat", i),FileMode.Open); 

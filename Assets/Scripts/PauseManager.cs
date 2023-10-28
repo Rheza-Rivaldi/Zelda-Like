@@ -5,32 +5,49 @@ using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour
 {
-    private bool isPaused;
+    [SerializeField] private bool isPaused;
     public GameObject pausePanel;
+    public GameObject inventoryPanel;
+    [SerializeField] private bool pausing;
+    [SerializeField] private bool openingInventory;
 
     // Start is called before the first frame update
     void Start()
     {
-        isPaused = false;        
+        isPaused = false;
+        pausing = false;
+        openingInventory = false;    
     }
 
     // Update is called once per frame
     void Update()
     {
         if(Input.GetButtonDown("Pause")){
+            pausing = !pausing;
+            openingInventory = false;
+            PauseState();
+        }
+        if(Input.GetButtonDown("Inventory")){
+            openingInventory = !openingInventory;
+            pausing = false;
             PauseState();
         }
     }
 
     public void PauseState(){
-        isPaused = !isPaused;
-            pausePanel.SetActive(isPaused);
-            if(isPaused){
-                Time.timeScale = 0f;
-            }
-            else{
-                Time.timeScale = 1f;
-            }
+        if(pausing || openingInventory){
+            isPaused = true;
+        }else{
+            isPaused = false;
+        }
+        pausePanel.SetActive(pausing);
+        inventoryPanel.SetActive(openingInventory);
+        if(isPaused){
+            Time.timeScale = 0f;
+        }
+        else{
+            Time.timeScale = 1f;
+        }
     }
     public void Quit(){
         SceneManager.LoadScene("TitleScreen");
