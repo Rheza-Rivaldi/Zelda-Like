@@ -36,99 +36,103 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\JNumberFormatException.cs" />
      <Compile Include="Assets\Scripts\Room\DungeonRoom.cs" />
      <Compile Include="Assets\Scripts\Inventory\ItemUseEffect.cs" />
      <Compile Include="Assets\Scripts\NPC\BoundedNPC.cs" />
+     <Compile Include="Assets\TotalJSON\Examples\ParseAndHandleJSON.cs" />
+     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\JArrayIndexOutOfRangeException.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Inventory\SerializeableListString.cs" />
      <Compile Include="Assets\Scripts\Inventory\InventorySlot.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\ContextClue.cs" />
+     <Compile Include="Assets\TotalJSON\Scripts\Attributes\IncludeToJSONSerializeAttribute.cs" />
      <Compile Include="Assets\Scripts\Objects\PowerUp.cs" />
      <Compile Include="Assets\Scripts\Objects\Projectile.cs" />
+     <Compile Include="Assets\TotalJSON\Examples\ExampleSerializeObjects\ExamplePlayerItemObject.cs" />
+     <Compile Include="Assets\TotalJSON\Examples\SaveAndLoadFile.cs" />
      <Compile Include="Assets\Scripts\RoomMove.cs" />
+     <Compile Include="Assets\TotalJSON\Internal\InternalTools.cs" />
      <Compile Include="Assets\Scripts\Room\BaseRoom.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\Inventory.cs" />
+     <Compile Include="Assets\TotalJSON\Scripts\Attributes\ExcludeFromJSONSerializeAttribute.cs" />
+     <Compile Include="Assets\Scripts\PlayerScripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\CoinTextManager.cs" />
      <Compile Include="Assets\Scripts\SceneTransition.cs" />
+     <Compile Include="Assets\TotalJSON\Scripts\JBoolean.cs" />
+     <Compile Include="Assets\TotalJSON\Examples\SerializeAndDeserialize.cs" />
      <Compile Include="Assets\Scripts\Inventory\InventoryManager.cs" />
+     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\DeserializeException.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\HeartManager.cs" />
+     <Compile Include="Assets\TotalJSON\Scripts\JString.cs" />
+     <Compile Include="Assets\TotalJSON\Scripts\Settings\CreateStringSettings.cs" />
      <Compile Include="Assets\Scripts\Enemy Scripts\RockBullet.cs" />
+     <Compile Include="Assets\TotalJSON\Scripts\JNull.cs" />
+     <Compile Include="Assets\TotalJSON\Scripts\JValue.cs" />
      <Compile Include="Assets\Scripts\Enemy Scripts\PatrolLog.cs" />
+     <Compile Include="Assets\TotalJSON\Scripts\JSON.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\ItemDatabase.cs" />
      <Compile Include="Assets\Scripts\Objects\Sign.cs" />
      <Compile Include="Assets\Scripts\PauseManager.cs" />
      <Compile Include="Assets\Scripts\Objects\Interactable.cs" />
+     <Compile Include="Assets\TotalJSON\Scripts\Settings\DeserializeSettings.cs" />
      <Compile Include="Assets\Scripts\Objects\Switch.cs" />
+     <Compile Include="Assets\TotalJSON\Internal\JSONRuntimeDebugContainer.cs" />
+     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\JSONKeyAlreadyExistsException.cs" />
      <Compile Include="Assets\Scripts\Knockback.cs" />
+     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\JArgumentException.cs" />
      <Compile Include="Assets\Scripts\Objects\Door.cs" />
      <Compile Include="Assets\Scripts\Enemy Scripts\MeleeEnemy.cs" />
+     <Compile Include="Assets\TotalJSON\Internal\ParseStringRunner.cs" />
+     <Compile Include="Assets\TotalJSON\Examples\CreateAndModifyJSON.cs" />
      <Compile Include="Assets\Scripts\Enemy Scripts\TurretLog.cs" />
      <Compile Include="Assets\Scripts\Objects\Arrow.cs" />
+     <Compile Include="Assets\TotalJSON\Scripts\JArray.cs" />
      <Compile Include="Assets\Scripts\Room\OverworldRoom.cs" />
      <Compile Include="Assets\Scripts\Inventory\PlayerInventory.cs" />
+     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\JNumberOverflowException.cs" />
      <Compile Include="Assets\Scripts\Inventory\InventoryItems.cs" />
+     <Compile Include="Assets\Scripts\Base Component\BasicHealthSystem.cs" />
      <Compile Include="Assets\Scripts\Objects\Coin.cs" />
+     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\JSONKeyNotFoundException.cs" />
      <Compile Include="Assets\Scripts\Objects\MPBottle.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\BoolValue.cs" />
-     <Compile Include="Assets\Scripts\Room\DungeonEnemyRoom.cs" />
+     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\JValueTypeException.cs" />
      <Compile Include="Assets\Scripts\Inventory\PhysicalInventoryItem.cs" />
+     <Compile Include="Assets\Scripts\Room\DungeonEnemyRoom.cs" />
+     <Compile Include="Assets\TotalJSON\Examples\ExampleSerializeObjects\ExamplePlayerObject.cs" />
      <Compile Include="Assets\Scripts\Objects\Heart.cs" />
      <Compile Include="Assets\Scripts\Objects\HeartContainer.cs" />
      <Compile Include="Assets\Scripts\Enemy Scripts\Log.cs" />
+     <Compile Include="Assets\Scripts\Inventory\InventorySaver.cs" />
      <Compile Include="Assets\Scripts\Enemy Scripts\AreaEnemy.cs" />
      <Compile Include="Assets\Scripts\SignalListener.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\MPManager.cs" />
      <Compile Include="Assets\Scripts\Enemy Scripts\Enemy.cs" />
+     <Compile Include="Assets\TotalJSON\Internal\CreateStringRunner.cs" />
+     <Compile Include="Assets\TotalJSON\Internal\StringPointer.cs" />
+     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\JValueNullException.cs" />
+     <Compile Include="Assets\Scripts\Base Component\BasicDamage.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\LootTable.cs" />
      <Compile Include="Assets\Scripts\Objects\Pot.cs" />
+     <Compile Include="Assets\TotalJSON\Scripts\Settings\SerializeSettings.cs" />
+     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\JArgumentNullException.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\Signal.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerHit.cs" />
+     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\ParseException.cs" />
      <Compile Include="Assets\Scripts\TitleScreen.cs" />
+     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\ProtectedException.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\Item.cs" />
+     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\SerializeException.cs" />
+     <Compile Include="Assets\TotalJSON\Scripts\JNumber.cs" />
+     <Compile Include="Assets\TotalJSON\Scripts\Settings\ParseStringSettings.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\UnknownObjectTypeException.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\FloatValue.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\VectorValue.cs" />
      <Compile Include="Assets\Scripts\Objects\TreasureChest.cs" />
-     <Compile Include="Assets\Scripts\Inventory\InventorySaver.cs" />
-     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\JValueTypeException.cs" />
-     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\DeserializeException.cs" />
-     <Compile Include="Assets\TotalJSON\Scripts\Settings\ParseStringSettings.cs" />
-     <Compile Include="Assets\TotalJSON\Examples\ParseAndHandleJSON.cs" />
-     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\SerializeException.cs" />
-     <Compile Include="Assets\TotalJSON\Scripts\Settings\DeserializeSettings.cs" />
-     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\JNumberOverflowException.cs" />
-     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\JSONKeyNotFoundException.cs" />
-     <Compile Include="Assets\TotalJSON\Scripts\Settings\CreateStringSettings.cs" />
-     <Compile Include="Assets\TotalJSON\Scripts\Settings\SerializeSettings.cs" />
-     <Compile Include="Assets\TotalJSON\Examples\ExampleSerializeObjects\ExamplePlayerItemObject.cs" />
-     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\JArgumentNullException.cs" />
-     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\ProtectedException.cs" />
-     <Compile Include="Assets\TotalJSON\Internal\ParseStringRunner.cs" />
-     <Compile Include="Assets\TotalJSON\Examples\SerializeAndDeserialize.cs" />
-     <Compile Include="Assets\TotalJSON\Scripts\Attributes\IncludeToJSONSerializeAttribute.cs" />
-     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\JArrayIndexOutOfRangeException.cs" />
-     <Compile Include="Assets\TotalJSON\Examples\CreateAndModifyJSON.cs" />
-     <Compile Include="Assets\TotalJSON\Examples\ExampleSerializeObjects\ExamplePlayerObject.cs" />
-     <Compile Include="Assets\TotalJSON\Scripts\JNull.cs" />
-     <Compile Include="Assets\TotalJSON\Internal\CreateStringRunner.cs" />
-     <Compile Include="Assets\TotalJSON\Scripts\JArray.cs" />
-     <Compile Include="Assets\TotalJSON\Scripts\Attributes\ExcludeFromJSONSerializeAttribute.cs" />
-     <Compile Include="Assets\TotalJSON\Scripts\JNumber.cs" />
-     <Compile Include="Assets\TotalJSON\Internal\StringPointer.cs" />
-     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\JNumberFormatException.cs" />
-     <Compile Include="Assets\TotalJSON\Internal\JSONRuntimeDebugContainer.cs" />
-     <Compile Include="Assets\TotalJSON\Examples\SaveAndLoadFile.cs" />
-     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\JArgumentException.cs" />
-     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\ParseException.cs" />
-     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\UnknownObjectTypeException.cs" />
-     <Compile Include="Assets\TotalJSON\Internal\InternalTools.cs" />
-     <Compile Include="Assets\TotalJSON\Scripts\JValue.cs" />
-     <Compile Include="Assets\TotalJSON\Scripts\JBoolean.cs" />
-     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\JSONKeyAlreadyExistsException.cs" />
-     <Compile Include="Assets\TotalJSON\Scripts\JString.cs" />
-     <Compile Include="Assets\TotalJSON\Scripts\Exceptions\JValueNullException.cs" />
-     <Compile Include="Assets\TotalJSON\Scripts\JSON.cs" />
-     <Compile Include="Assets\Scripts\Inventory\SerializeableListString.cs" />
-     <Compile Include="Assets\Scripts\ScriptableObjects\ItemDatabase.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\Abilities\BaseAbilities.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -373,6 +377,9 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
         <HintPath>C:\Program Files\Unity 2020.3.22f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+        <HintPath>D:\Unity Files\UnityProjects\Zelda Like\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
         <HintPath>D:\Unity Files\UnityProjects\Zelda Like\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
@@ -820,6 +827,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{e3aa6e72-2c2c-1b83-8dad-192ec4e512e1}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -1,0 +1,12 @@
+{
+	"serializableList": [
+		{
+			"name": "HP Potion",
+			"count": 0
+		},
+		{
+			"name": "MP Potion",
+			"count": 3
+		}
+	]
+}

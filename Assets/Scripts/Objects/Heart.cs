@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Heart : PowerUp
 {
-    public FloatValue playerHealth;
-    public FloatValue heartContainer;
-    public float healthValue;
+    /* public FloatValue playerHealth;
+    public FloatValue heartContainer; */
+    //[SerializeField]private PlayerHealth playerHealth;
+    [SerializeField]private float healthValue;
 
 
     // Start is called before the first frame update
@@ -22,17 +23,12 @@ public class Heart : PowerUp
     }
 
     public void OnTriggerEnter2D(Collider2D other) {
-        if(other.CompareTag("Player") && !other.isTrigger){
-            if(playerHealth.RuntimeValue < heartContainer.initialValue *2f){
-                playerHealth.RuntimeValue += healthValue;
-                if(playerHealth.RuntimeValue > heartContainer.initialValue *2f){
-                    playerHealth.RuntimeValue = heartContainer.initialValue *2f;
-                    powerUpSignal.RaiseSignal();
-                    Destroy(this.gameObject);
-                }else if(playerHealth.RuntimeValue <= heartContainer.initialValue *2f){
-                    powerUpSignal.RaiseSignal();
-                    Destroy(this.gameObject);
-                }
+        if(other.CompareTag("Player") && other.isTrigger){
+            PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
+            if(playerHealth.currentHealth < playerHealth.healthContainer.RuntimeValue *2f){
+                playerHealth.IncreaseHealthPoint(healthValue);
+                powerUpSignal.RaiseSignal();
+                Destroy(this.gameObject);
             }
         }
     }

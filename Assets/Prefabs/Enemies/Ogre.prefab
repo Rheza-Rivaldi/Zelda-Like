@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7614714297873402577}
   - component: {fileID: 8948868319378643659}
   - component: {fileID: 587999385481993441}
+  - component: {fileID: 7475878979603424148}
   m_Layer: 6
   m_Name: DownHitBox
   m_TagString: Untagged
@@ -75,7 +76,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackForce: 2
   knockbackDuration: 0.2
-  damage: 1
+  targetTag: Player
+--- !u!114 &7475878979603424148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3365086182441329762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 001d489388385fa43b0f80c8532d1769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
+  targetTag: Player
 --- !u!1 &3885582108037202631
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,6 +106,7 @@ GameObject:
   - component: {fileID: 3885582108037202746}
   - component: {fileID: 3885582108037202747}
   - component: {fileID: 4582188264441367044}
+  - component: {fileID: 4139492310173298490}
   m_Layer: 6
   m_Name: Ogre
   m_TagString: Enemy
@@ -286,6 +302,20 @@ MonoBehaviour:
   chaseRadius: 4
   attackRadius: 1.2
   anim: {fileID: 0}
+--- !u!114 &4139492310173298490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3885582108037202631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 001d489388385fa43b0f80c8532d1769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
+  targetTag: Player
 --- !u!1 &4483174245041251432
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,6 +327,7 @@ GameObject:
   - component: {fileID: 8835323913597707575}
   - component: {fileID: 3804022818409551372}
   - component: {fileID: 136051564091361777}
+  - component: {fileID: 7661639169190419548}
   m_Layer: 6
   m_Name: UpHitBox
   m_TagString: Untagged
@@ -361,7 +392,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackForce: 2
   knockbackDuration: 0.2
-  damage: 1
+  targetTag: Player
+--- !u!114 &7661639169190419548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4483174245041251432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 001d489388385fa43b0f80c8532d1769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
+  targetTag: Player
 --- !u!1 &5173978435852755035
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,6 +418,7 @@ GameObject:
   - component: {fileID: 5850653889488818241}
   - component: {fileID: 5230349937423701247}
   - component: {fileID: 8347688394787885715}
+  - component: {fileID: 3330306010783504189}
   m_Layer: 6
   m_Name: LeftHitBox
   m_TagString: Untagged
@@ -437,7 +483,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackForce: 2
   knockbackDuration: 0.2
-  damage: 1
+  targetTag: Player
+--- !u!114 &3330306010783504189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5173978435852755035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 001d489388385fa43b0f80c8532d1769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
+  targetTag: Player
 --- !u!1 &6182681314348949375
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,6 +509,7 @@ GameObject:
   - component: {fileID: 4108986300295546482}
   - component: {fileID: 3440176129240668761}
   - component: {fileID: 7048852307236541145}
+  - component: {fileID: 8709293733777580410}
   m_Layer: 6
   m_Name: RightHitBox
   m_TagString: Untagged
@@ -513,4 +574,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackForce: 2
   knockbackDuration: 0.2
-  damage: 1
+  targetTag: Player
+--- !u!114 &8709293733777580410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6182681314348949375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 001d489388385fa43b0f80c8532d1769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
+  targetTag: Player

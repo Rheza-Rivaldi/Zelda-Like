@@ -204,6 +204,7 @@ GameObject:
   - component: {fileID: 5805337604607448248}
   - component: {fileID: 5805337604607448255}
   - component: {fileID: 5805337604607448254}
+  - component: {fileID: 2181399431304577059}
   m_Layer: 8
   m_Name: DownHitBox
   m_TagString: Player
@@ -269,7 +270,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackForce: 2
   knockbackDuration: 0.2
-  damage: 1
+  targetTag: Enemy
+--- !u!114 &2181399431304577059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5805337604607448249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 001d489388385fa43b0f80c8532d1769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
+  targetTag: Enemy
 --- !u!1 &5805337604681336307
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,6 +296,7 @@ GameObject:
   - component: {fileID: 5805337604681336306}
   - component: {fileID: 5805337604681336305}
   - component: {fileID: 5805337604681336304}
+  - component: {fileID: 4270972920020144770}
   m_Layer: 8
   m_Name: RightHitBox
   m_TagString: Player
@@ -346,7 +362,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackForce: 2
   knockbackDuration: 0.2
-  damage: 1
+  targetTag: Enemy
+--- !u!114 &4270972920020144770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5805337604681336307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 001d489388385fa43b0f80c8532d1769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
+  targetTag: Enemy
 --- !u!1 &5805337604697632953
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,6 +388,7 @@ GameObject:
   - component: {fileID: 5805337604697632952}
   - component: {fileID: 5805337604697632959}
   - component: {fileID: 5805337604697632958}
+  - component: {fileID: 4738957793621093049}
   m_Layer: 8
   m_Name: UpHitBox
   m_TagString: Player
@@ -423,7 +454,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackForce: 2
   knockbackDuration: 0.2
-  damage: 1
+  targetTag: Enemy
+--- !u!114 &4738957793621093049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5805337604697632953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 001d489388385fa43b0f80c8532d1769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
+  targetTag: Enemy
 --- !u!1 &5805337605332385910
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,6 +480,7 @@ GameObject:
   - component: {fileID: 5805337605332385909}
   - component: {fileID: 5805337605332385908}
   - component: {fileID: 5805337605332385899}
+  - component: {fileID: 5688180967304285334}
   m_Layer: 8
   m_Name: LeftHitBox
   m_TagString: Player
@@ -500,7 +546,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackForce: 2
   knockbackDuration: 0.2
-  damage: 1
+  targetTag: Enemy
+--- !u!114 &5688180967304285334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5805337605332385910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 001d489388385fa43b0f80c8532d1769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
+  targetTag: Enemy
 --- !u!1 &5805337605938792484
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,7 +575,6 @@ GameObject:
   - component: {fileID: 5805337605938792472}
   - component: {fileID: 5805337605938792479}
   - component: {fileID: 5805337605938792478}
-  - component: {fileID: 5805337605938792477}
   - component: {fileID: 7546859745426142002}
   - component: {fileID: 4717992373835010043}
   - component: {fileID: 716455666565323371}
@@ -543,6 +602,7 @@ Transform:
   - {fileID: 5805337604697632952}
   - {fileID: 3414743145029143694}
   - {fileID: 7408107855911432626}
+  - {fileID: 8961477742145035711}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -660,8 +720,6 @@ MonoBehaviour:
   playerInventory: {fileID: 11400000, guid: 731b135db73d2d14a84ade0d6fd9edaa, type: 2}
   obtainedItemSprite: {fileID: 6209602354498335858}
   speed: 4
-  currentHealth: {fileID: 11400000, guid: 36d1ea290050fa54e9bcf2d66dec8a6f, type: 2}
-  playerHealthSignal: {fileID: 11400000, guid: 2edf52dd02fb1ca4689b83c425e162fc, type: 2}
   shakeScreen: {fileID: 11400000, guid: b57cd60c8885209429fae497a956bae9, type: 2}
   projectile: {fileID: 1362424702614333345, guid: a2bf03cd2f28c9446a63a55cc2e4f5c9, type: 3}
   bow: {fileID: 11400000, guid: fcb3833563d80994fbf42448ea08a5b4, type: 2}
@@ -671,7 +729,7 @@ MonoBehaviour:
   regularColor: {r: 1, g: 1, b: 1, a: 1}
   flashDuration: 0.07
   numberOfFlashes: 4
-  triggerCollider: {fileID: 5805337605938792477}
+  triggerCollider: {fileID: 5233654253503783977}
   mySprite: {fileID: 5805337605938792475}
 --- !u!95 &5805337605938792478
 Animator:
@@ -692,32 +750,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &5805337605938792477
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5805337605938792484}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0026282668, y: -0.091988444}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
-    newSize: {x: 1, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.5006343, y: 1.0170376}
-  m_EdgeRadius: 0
 --- !u!114 &7546859745426142002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -809,3 +841,77 @@ MonoBehaviour:
   m_UseImpactDirection: 0
   m_ScaleImpactWithMass: 0
   m_ScaleImpactWithSpeed: 0
+--- !u!1 &8590664307960055988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8961477742145035711}
+  - component: {fileID: 5233654253503783977}
+  - component: {fileID: 7696277489829741538}
+  m_Layer: 8
+  m_Name: PlayerHealth
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8961477742145035711
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8590664307960055988}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5805337605938792474}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &5233654253503783977
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8590664307960055988}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0026282668, y: -0.091988444}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 2}
+    newSize: {x: 1, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5006343, y: 1.0170376}
+  m_EdgeRadius: 0
+--- !u!114 &7696277489829741538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8590664307960055988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 479916068b1abeb4fb24d3a5320f68f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectHealth: {fileID: 11400000, guid: 36d1ea290050fa54e9bcf2d66dec8a6f, type: 2}
+  currentHealth: 0
+  healthSignal: {fileID: 11400000, guid: 2edf52dd02fb1ca4689b83c425e162fc, type: 2}
+  healthContainer: {fileID: 11400000, guid: 6b9636e5802a4ef4fb3989cef39c3273, type: 2}

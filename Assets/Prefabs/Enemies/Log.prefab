@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 233591120761015664}
   - component: {fileID: 233591120761015679}
   - component: {fileID: 233591120761015665}
+  - component: {fileID: 8936889085963166306}
   m_Layer: 6
   m_Name: Log
   m_TagString: Enemy
@@ -31,7 +32,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 233591120761015673}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.67675, y: -4.3823786, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -201,6 +202,7 @@ MonoBehaviour:
   originalPosition: {x: 0, y: 0, z: 0}
   deathAnimPrefab: {fileID: 1984088940604871455, guid: 467d2d78d1bd1be4583b4ecbcbb06f4a, type: 3}
   deathSignal: {fileID: 11400000, guid: 63845748a2ebb504a86d83f820cee5aa, type: 2}
+  thisLoot: {fileID: 0}
   myRigidBody: {fileID: 0}
   target: {fileID: 0}
   chaseRadius: 4
@@ -220,4 +222,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackForce: 2
   knockbackDuration: 0.2
-  damage: 1
+  targetTag: Player
+--- !u!114 &8936889085963166306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233591120761015673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 001d489388385fa43b0f80c8532d1769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
+  targetTag: Player

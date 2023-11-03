@@ -21,8 +21,10 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D myRigidbody;
     private Vector3 change;
     private Animator animator;
-    public FloatValue currentHealth;
-    public Signal playerHealthSignal;
+
+    /* public FloatValue currentHealth;
+    public Signal playerHealthSignal; */
+    
     public Signal shakeScreen;
 
     public GameObject projectile;
@@ -147,8 +149,10 @@ public class PlayerMovement : MonoBehaviour
         myRigidbody.MovePosition (transform.position + change * speed * Time.fixedDeltaTime);
     }
 
-    public void KnockPlayer(float knockbackDuration, float damage){
-        currentHealth.RuntimeValue -= damage;
+    public void KnockPlayer(float knockbackDuration){
+        StartCoroutine(DoKnockback(knockbackDuration));
+        
+        /* currentHealth.RuntimeValue -= damage;
         playerHealthSignal.RaiseSignal();
         if(currentHealth.RuntimeValue > 0){
             StartCoroutine(DoKnockback(knockbackDuration));
@@ -156,7 +160,7 @@ public class PlayerMovement : MonoBehaviour
         else if(currentHealth.RuntimeValue <= 0){
             playerHealthSignal.RaiseSignal();
             this.gameObject.SetActive(false);
-        }
+        } */
     }
 
     private IEnumerator DoKnockback(float knockbackDuration){

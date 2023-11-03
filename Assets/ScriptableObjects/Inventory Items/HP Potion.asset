@@ -21,7 +21,7 @@ MonoBehaviour:
   thisEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5731450198214742059, guid: 6bf99feedeaf70f4199c9d7794592f3a, type: 3}
+      - m_Target: {fileID: 7838017031221208501, guid: 8363e9699c32c1646828f5ba29445708, type: 3}
         m_TargetAssemblyTypeName: ItemUseEffect, Assembly-CSharp
         m_MethodName: HPPotion
         m_Mode: 3
