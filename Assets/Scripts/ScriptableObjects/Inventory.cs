@@ -10,8 +10,8 @@ public class Inventory : ScriptableObject
     public List<Item> items = new List<Item>();
     public int numberOfKeys;
     public int coins;
-    public float maxMP = 10;
-    public float currentMP;
+    /* public float maxMP = 10;
+    public float currentMP; */
 
     public void AddItem(Item itemToAdd){
         if(itemToAdd.isKey){
@@ -34,7 +34,7 @@ public class Inventory : ScriptableObject
         }
     }
 
-    public void MPUsage(float mPCost){
+    /* public void MPUsage(float mPCost){
         currentMP -= mPCost;
-    }
+    } */
 }

@@ -6,7 +6,8 @@ using UnityEngine;
 public class ItemUseEffect : MonoBehaviour
 {
 
-    public Inventory playerInventory;
+    //public Inventory playerInventory;
+    public FloatValue playerMP;
     public FloatValue playerHP;
     public Signal healthSignal;
     public Signal mpSignal;
@@ -20,7 +21,7 @@ public class ItemUseEffect : MonoBehaviour
     }
 
     public void MPPotion(int amountToIncrease){
-        playerInventory.currentMP += amountToIncrease;
+        playerMP.RuntimeValue += amountToIncrease;
         mpSignal.RaiseSignal();
     }
 }

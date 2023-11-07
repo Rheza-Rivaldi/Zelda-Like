@@ -6,24 +6,25 @@ using UnityEngine.UI;
 public class MPManager : MonoBehaviour
 {
     public Slider mPSlider;
-    public Inventory playerInventory;
+    //public Inventory playerInventory;
+    public FloatValue playerMP;
 
     // Start is called before the first frame update
     void Start()
     {
-        mPSlider.maxValue = playerInventory.maxMP;
-        mPSlider.value = playerInventory.maxMP;
-        playerInventory.currentMP = playerInventory.maxMP;
+        mPSlider.maxValue = playerMP.initialValue;
+        mPSlider.value = playerMP.RuntimeValue;
+        playerMP.RuntimeValue = playerMP.initialValue;
     }
 
     public void UpdateMP(){
-        if(playerInventory.currentMP > mPSlider.maxValue){
-            playerInventory.currentMP = mPSlider.maxValue;
+        if(playerMP.RuntimeValue > mPSlider.maxValue){
+            playerMP.RuntimeValue = mPSlider.maxValue;
         }
-        else if(playerInventory.currentMP < 0){
-            playerInventory.currentMP = 0;
+        else if(playerMP.RuntimeValue < 0){
+            playerMP.RuntimeValue = 0;
         }
-        mPSlider.value = playerInventory.currentMP;
+        mPSlider.value = playerMP.RuntimeValue;
     }
 
     /* public void DecreaseMP(){

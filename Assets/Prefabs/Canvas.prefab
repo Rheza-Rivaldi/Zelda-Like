@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 1066857399}
   - component: {fileID: 1066857400}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: MPBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -395,7 +395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mPSlider: {fileID: 1066857398}
-  playerInventory: {fileID: 11400000, guid: 731b135db73d2d14a84ade0d6fd9edaa, type: 2}
+  playerMP: {fileID: 11400000, guid: 9c0c3028b1fb825408df272252a0ae70, type: 2}
 --- !u!114 &1066857400
 MonoBehaviour:
   m_ObjectHideFlags: 0

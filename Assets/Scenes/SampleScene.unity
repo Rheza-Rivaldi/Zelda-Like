@@ -20072,17 +20072,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e00b512b6d8634142876852943d0e597, type: 3}
---- !u!114 &1484724738 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5972145721959767506, guid: 6642bb7fb8ac37649966a96c45b3f7dc, type: 3}
-  m_PrefabInstance: {fileID: 5972145721872374656}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0984a55f4cd6e9a46b4386042d28294a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1526080336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -86467,14 +86456,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7838017031221208501, guid: 8363e9699c32c1646828f5ba29445708, type: 3}
-      propertyPath: playerHealth
-      value: 
-      objectReference: {fileID: 1602379779}
-    - target: {fileID: 7838017031221208501, guid: 8363e9699c32c1646828f5ba29445708, type: 3}
-      propertyPath: playerHPManager
-      value: 
-      objectReference: {fileID: 1484724738}
     - target: {fileID: 7991456139328848100, guid: 8363e9699c32c1646828f5ba29445708, type: 3}
       propertyPath: m_RootOrder
       value: 14

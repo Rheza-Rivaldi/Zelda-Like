@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class MPBottle : PowerUp
 {
-    public Inventory playerInventory;
+    //public Inventory playerInventory;
+    public FloatValue playerMP;
     public float mPValue;
 
     public void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Player") && !other.isTrigger){
-            playerInventory.currentMP += mPValue;
+            playerMP.RuntimeValue += mPValue;
             powerUpSignal.RaiseSignal();
             Destroy(this.gameObject);
         }

@@ -10,7 +10,8 @@ public class PlayerMovement : MonoBehaviour
         walk,
         attack,
         interact,
-        stagger
+        stagger,
+        ability
     }
     public PlayerState currentState;
 
@@ -30,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject projectile;
     public Item bow;
     public Signal useMP;
+    public FloatValue playerMP;
 
     public VectorValue startingPosition;
 
@@ -40,6 +42,9 @@ public class PlayerMovement : MonoBehaviour
     public int numberOfFlashes;
     public Collider2D triggerCollider;
     public SpriteRenderer mySprite;
+
+    [SerializeField]private BaseAbilities currentAbility;
+    private Vector2 currentFacing;
 
     // Start is called before the first frame update
     void Start()
@@ -62,17 +67,29 @@ public class PlayerMovement : MonoBehaviour
         change = Vector3.zero;
         change.x = Input.GetAxisRaw("Horizontal");
         change.y = Input.GetAxisRaw("Vertical");
-        if(Input.GetButtonDown("Attack") && currentState != PlayerState.attack && currentState != PlayerState.stagger){
+        if(!IsUnableToAct(currentState)){
+            GetInput();
+        }
+        UpdateAnimationAndMove();
+    }
+
+    private void GetInput(){
+        if(Input.GetButtonDown("Attack")){
             StartCoroutine(AttackAnim());
         }
-        else if(Input.GetButtonDown("Projectile") && currentState != PlayerState.attack && currentState != PlayerState.stagger && playerInventory.currentMP > 0){
+        else if(Input.GetButtonDown("Projectile") && playerMP.RuntimeValue > 0){
             if(playerInventory.CheckForItem(bow)){
                 StartCoroutine(ProjectileAnim());
             }
         }
-        else if(currentState == PlayerState.idle){
-            UpdateAnimationAndMove();
+        else if(Input.GetButtonDown("Ability")){
+            if(currentAbility != null){
+                StartCoroutine(AbilityAnim(currentAbility.duration));
+            }
         }
+        /* else if(currentState == PlayerState.idle){
+            UpdateAnimationAndMove();
+        } */
     }
     
 
@@ -99,11 +116,18 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public IEnumerator AbilityAnim(float abilityDuration){
+        currentState = PlayerState.ability;
+        currentAbility.Ability(transform.position, currentFacing, animator, myRigidbody);
+        yield return new WaitForSeconds(abilityDuration);
+        currentState = PlayerState.idle;
+    }
+
     void MakeArrow(){
         Vector2 temp = new Vector2(animator.GetFloat("moveX"), animator.GetFloat("moveY"));
         Arrow arrow = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Arrow>();
         arrow.Setup(temp, ArrowDirection());
-        playerInventory.MPUsage(arrow.mPCost);
+        //playerInventory.MPUsage(arrow.mPCost);
         useMP.RaiseSignal();
     }
 
@@ -137,6 +161,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("moveX", change.x);
             animator.SetFloat("moveY", change.y);
             animator.SetBool("moving", true);
+            currentFacing = change;
         }
         else
         {
@@ -184,5 +209,12 @@ public class PlayerMovement : MonoBehaviour
             temp++;
         }
         triggerCollider.enabled = true;
+    }
+
+    bool IsUnableToAct(PlayerState state){
+        if(state == PlayerState.attack || state == PlayerState.stagger || state == PlayerState.ability){
+            return true;
+        }
+        return false;
     }
 }

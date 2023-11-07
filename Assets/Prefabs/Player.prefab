@@ -724,6 +724,7 @@ MonoBehaviour:
   projectile: {fileID: 1362424702614333345, guid: a2bf03cd2f28c9446a63a55cc2e4f5c9, type: 3}
   bow: {fileID: 11400000, guid: fcb3833563d80994fbf42448ea08a5b4, type: 2}
   useMP: {fileID: 11400000, guid: 0c4ed63f0fd84f342a78039dd62b5d3c, type: 2}
+  playerMP: {fileID: 11400000, guid: 9c0c3028b1fb825408df272252a0ae70, type: 2}
   startingPosition: {fileID: 11400000, guid: 93bacb06a5890054f800529158e5fa94, type: 2}
   flashColor: {r: 1, g: 0.19339621, b: 0.19339621, a: 0.3882353}
   regularColor: {r: 1, g: 1, b: 1, a: 1}
@@ -731,6 +732,7 @@ MonoBehaviour:
   numberOfFlashes: 4
   triggerCollider: {fileID: 5233654253503783977}
   mySprite: {fileID: 5805337605938792475}
+  currentAbility: {fileID: 11400000, guid: 3ba34636d5231bf46a956dbd7d68552e, type: 2}
 --- !u!95 &5805337605938792478
 Animator:
   serializedVersion: 3

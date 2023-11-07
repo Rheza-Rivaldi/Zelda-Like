@@ -77,7 +77,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcb3d5b6c5c8bfb4caa6699f0dad4eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInventory: {fileID: 11400000, guid: 731b135db73d2d14a84ade0d6fd9edaa, type: 2}
+  playerMP: {fileID: 11400000, guid: 9c0c3028b1fb825408df272252a0ae70, type: 2}
   playerHP: {fileID: 11400000, guid: 36d1ea290050fa54e9bcf2d66dec8a6f, type: 2}
   healthSignal: {fileID: 11400000, guid: 2edf52dd02fb1ca4689b83c425e162fc, type: 2}
   mpSignal: {fileID: 11400000, guid: 0c4ed63f0fd84f342a78039dd62b5d3c, type: 2}
